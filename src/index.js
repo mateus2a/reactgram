@@ -8,9 +8,6 @@ mongoose.connect(
   { useNewUrlParser: true, useUnifiedTopology:true }
 );
 
-app.get('/', (req, res) => {
-  return res.send(`Coé`);
-});
-
+app.use(require('./routes'));
 
 app.listen(3333);
